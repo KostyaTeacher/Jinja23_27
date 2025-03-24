@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Мої завдання</h1>
+
+{% if tasks|length > 0 %}
+    <ul>
+    {% for task in tasks %}
+        <li>
+            {{ task.name }}
+            {% if task.completed %}
+                ✅
+            {% else %}
+                ❌
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>У тебе поки немає завдань</p>
+{% endif %}
+</body>
+</html>
