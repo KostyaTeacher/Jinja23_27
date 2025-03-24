@@ -5,6 +5,7 @@ def hash_password(password: str):
     print("salt", salt)
     hashed = bcrypt.hashpw(password.encode(), salt)
     print("hashed", hashed)
+    print("hfgsfgsdkfsdfdskfvysd")
     return hashed
 
 def check_password(password:str, hashed_password):
