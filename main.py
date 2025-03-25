@@ -33,6 +33,14 @@ def todos():
 
 
 
+@app.get('/z/')
+def todos():
+    tasks = [
+        {"name": "z", "completed": True},
+        {"name": "Зрозуміти z", "completed": False},
+        {"name": "Зробити домашнє завдання", "z": False}
+    ]
+    return render_template('todos.html', tasks=tasks)
 
 
 
